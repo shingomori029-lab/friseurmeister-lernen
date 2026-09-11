@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Friseurmeister lernen</title>
+  <meta name="description" content="Lernapp für die Meisterprüfung im Friseurhandwerk – Teil II, III und IV">
+  <meta name="theme-color" content="#f6f3ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161a19" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Meister">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-512.png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/">Friseur<span>meister</span></a>
+    <button class="lang-toggle" id="langToggle" type="button" aria-pressed="false">訳</button>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <nav class="tabbar" aria-label="メニュー">
+    <a href="#/" data-tab="home"><span class="ico" aria-hidden="true">⌂</span>ホーム</a>
+    <a href="#/quiz" data-tab="quiz"><span class="ico" aria-hidden="true">?</span>クイズ</a>
+    <a href="#/cards" data-tab="cards"><span class="ico" aria-hidden="true">▤</span>カード</a>
+    <a href="#/exam" data-tab="exam"><span class="ico" aria-hidden="true">◷</span>模試</a>
+    <a href="#/stats" data-tab="stats"><span class="ico" aria-hidden="true">▮</span>記録</a>
+  </nav>
+
+  <script src="js/registry.js"></script>
+  <script src="js/data/teil2a.js"></script>
+  <script src="js/data/teil2b.js"></script>
+  <script src="js/data/teil3.js"></script>
+  <script src="js/data/teil4.js"></script>
+  <script src="js/data/cards.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/views/home.js"></script>
+  <script src="js/views/quiz.js"></script>
+  <script src="js/views/cards.js"></script>
+  <script src="js/views/exam.js"></script>
+  <script src="js/views/stats.js"></script>
+  <script>FM.start();</script>
+</body>
+</html>
