@@ -1,6 +1,6 @@
 // Offline-Unterstützung: zuerst das Netz (damit Änderungen sofort ankommen),
 // ohne Verbindung die zuletzt geladene Fassung aus dem Cache.
-const CACHE = "fm-v2";
+const CACHE = "fm-v3";
 const ASSETS = [
   "./",
   "index.html",
@@ -10,6 +10,7 @@ const ASSETS = [
   "js/registry.js",
   "js/data/teil2a.js",
   "js/data/teil2b.js",
+  "js/data/teil2-oral.js",
   "js/data/teil3.js",
   "js/data/teil4.js",
   "js/data/cards.js",
@@ -20,6 +21,7 @@ const ASSETS = [
   "js/views/cards.js",
   "js/views/exam.js",
   "js/views/stats.js",
+  "js/views/oral.js",
 ];
 
 self.addEventListener("install", (e) => {

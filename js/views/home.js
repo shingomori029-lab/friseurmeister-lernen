@@ -29,6 +29,7 @@ FM.route("", (el) => {
     </div>
 
     <h2>今日やること</h2>
+    <a class="btn primary block" href="#/oral">前回のTeil II出題テーマ・口頭練習（12テーマ）</a>
     <div class="stack">
       ${cards.open
         ? `<a class="btn primary block" href="#/cards/run?teil=all">単語カードを復習する（${Math.min(cards.open, FM.CARD_SESSION_MAX)}枚）</a>`
