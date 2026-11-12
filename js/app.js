@@ -71,7 +71,8 @@
     app.onkeydown = null;
     app.innerHTML = "";
     (routes[path] || routes[""])(app, params);
-    const tab = path.split("/")[0] || "home";
+    const first = path.split("/")[0] || "home";
+    const tab = first === "focus" ? "quiz" : first; // Intensivlernen gehört zum Quiz-Tab
     document.querySelectorAll(".tabbar a").forEach((a) => a.classList.toggle("active", a.dataset.tab === tab));
     window.scrollTo(0, 0);
   }

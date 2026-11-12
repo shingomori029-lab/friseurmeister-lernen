@@ -53,8 +53,14 @@
       s.n++;
       if (correct) s.ok++;
       s.last = correct ? 1 : 0;
+      s.d = dayNum(); // Tag der letzten Antwort, für die Reihenfolge im Drill
       touchDay();
       save();
+    },
+
+    // { n, ok, last, d } oder undefined, wenn die Frage noch nie beantwortet wurde
+    answerState(id) {
+      return state.q[id];
     },
 
     // Zuletzt falsch beantwortet = Schwachstelle

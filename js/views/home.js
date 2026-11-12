@@ -7,7 +7,7 @@ FM.route("", (el) => {
   const tiles = [2, 3, 4].map((t) => {
     const st = s.questionStats(FM.questionsFor(t));
     return `
-      <a class="tile" href="#/quiz?teil=${t}">
+      <a class="tile" href="#/focus?teil=${t}">
         <div class="tile-head">
           <span class="tile-title">${FM.esc(FM.teilName(t))}</span>
           <span class="tile-meta">習得 ${st.mastered}/${st.total}</span>
@@ -29,8 +29,9 @@ FM.route("", (el) => {
     </div>
 
     <h2>今日やること</h2>
-    <a class="btn primary block" href="#/oral">前回のTeil II出題テーマ・口頭練習（12テーマ）</a>
     <div class="stack">
+      <a class="btn primary block" href="#/oral">前回のTeil II出題テーマ・口頭練習（12テーマ）</a>
+      <a class="btn primary block" href="#/focus?teil=3">Teil III 集中ドリル（HF 1〜3）</a>
       ${cards.open
         ? `<a class="btn primary block" href="#/cards/run?teil=all">単語カードを復習する（${Math.min(cards.open, FM.CARD_SESSION_MAX)}枚）</a>`
         : `<div class="notice">今日のカード復習は完了しました 🎉</div>`}

@@ -99,6 +99,7 @@ body.show-ja .ja, .reveal-ja .ja { display: block; }
 .ja-btn {
   border: 1px solid var(--line); background: transparent; color: var(--muted);
   border-radius: 999px; padding: 3px 12px; font-size: 13px; cursor: pointer;
+  flex: none; white-space: nowrap;
 }
 .ja-btn[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
 body.show-ja .ja-btn { display: none; }
@@ -129,6 +130,10 @@ body.show-ja .ja-btn { display: none; }
 }
 .stat { font-size: 26px; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; }
 .stat-label { font-size: 12px; color: var(--muted); }
+
+.counts { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.counts b { color: var(--ink); font-weight: 600; }
+.counts .is-weak b { color: var(--ng); }
 
 .progress { height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; margin-top: 10px; }
 .progress > span { display: block; height: 100%; background: var(--accent); border-radius: 99px; transition: width .3s; }
@@ -182,6 +187,11 @@ body.show-ja .ja-btn { display: none; }
 .option.wrong { border-color: var(--ng); background: var(--ng-bg); }
 .option.wrong .key { background: var(--ng); color: var(--surface); border-color: var(--ng); }
 .option.dim { opacity: .55; }
+
+.retry-note { margin: 14px 0 -6px; font-size: 13px; color: var(--muted); }
+.note-ex { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 14px; }
+.result-hero .big small { font-size: 22px; font-weight: 600; color: var(--muted); }
+.btn[aria-disabled="true"] { opacity: .45; cursor: default; }
 
 .feedback { margin-top: 16px; padding: 14px; border-radius: 12px; border-left: 4px solid; }
 .feedback.ok { background: var(--ok-bg); border-color: var(--ok); }
